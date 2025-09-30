@@ -1,3 +1,15 @@
 # Plagiarism-Detector
-Plagiarism Detector will analyze all .txt  .pdf and .docx files in a folder, compare every file with every other file, and report groups of files whose similarity exceeds a given threshold.
-It uses a Sentence-BERT algorithm along with Similarity Cosine function to identify the similarity between the documents by comparing the words' semantics instead of matching it word-to-word
+Core Functionality — What We Have
+1. File types: .txt, .docx, .pdf.
+
+2. Empty file handling.
+
+3. Chunking → captures partial plagiarism.
+
+4. Sentence-BERT embeddings → semantic similarity.
+
+5. N-gram checks (on suspicious chunks) → catches verbatim copying.
+
+6. Pairwise similarity table → average similarity shown for all pairs.
+
+7. Detailed match breakdown → only for flagged pairs.
