@@ -1,5 +1,6 @@
 # Plagiarism-Detector
-Core Functionality — What We Have
+
+Core Functionalities:
 1. File types: .txt, .docx, .pdf.
 2. Empty file handling.
 3. Chunking → captures partial plagiarism.
