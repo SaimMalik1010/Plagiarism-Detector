@@ -1,4 +1,5 @@
 # TO RUN THIS PROGRAM, YOU NEED TO INSTALL THE FOLLOWING PACKAGES:
+# RUN THIS COMMAND IN YOUR TERMINAL
 # pip install sentence-transformers scikit-learn networkx python-docx PyMuPDF numpy
 
 import os
@@ -272,3 +273,4 @@ for tree in (results_tree, summary_tree):
     tree.tag_configure("empty", background="#d9d9d9")
 
 root.mainloop()
+
