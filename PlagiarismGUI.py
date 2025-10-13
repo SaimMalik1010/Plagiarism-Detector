@@ -2,6 +2,9 @@
 # RUN THIS COMMAND IN YOUR TERMINAL
 # pip install sentence-transformers scikit-learn networkx python-docx PyMuPDF numpy
 
+# TO RUN THIS PROGRAM, YOU NEED TO INSTALL THE FOLLOWING PACKAGES:
+# pip install sentence-transformers scikit-learn networkx python-docx PyMuPDF numpy
+
 import os
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
@@ -153,15 +156,30 @@ def run_detection():
             results_tree.insert("", "end", values=(os.path.basename(f1), os.path.basename(f2), f"{sim:.2f}%"), tags=(tag,))
 
     # populate Summary tab
+        # Summary tab (sorted)
     for row in summary_tree.get_children():
         summary_tree.delete(row)
-    for f, match, max_sim in summary:
+
+    def sim_value(sim_str):
+        if sim_str == "EMPTY":
+            return -1.0
+        try:
+            return float(sim_str.strip().strip('%'))
+        except Exception:
+            return -1.0
+
+    sorted_summary = sorted(summary, key=lambda item: sim_value(item[2]), reverse=True)
+
+    for f, match, max_sim in sorted_summary:
         if max_sim == "EMPTY":
             summary_tree.insert("", "end", values=(os.path.basename(f), "EMPTY", "EMPTY"), tags=("empty",))
         else:
             val = float(max_sim.strip("%"))
-            tag = "high" if val >= threshold else "low"
+            tag = "high" if val >= threshold*100 else "low"
             summary_tree.insert("", "end", values=(os.path.basename(f), match, max_sim), tags=(tag,))
+    summary_tree.tag_configure("high", background="#ff9999")
+    summary_tree.tag_configure("low", background="#b3ffb3")
+    summary_tree.tag_configure("empty", background="#e0e0e0")
 
     # populate Clustering tab
     for row in cluster_tree.get_children():
@@ -273,4 +291,3 @@ for tree in (results_tree, summary_tree):
     tree.tag_configure("empty", background="#d9d9d9")
 
 root.mainloop()
-
