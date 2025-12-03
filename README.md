@@ -5,20 +5,19 @@ Designed for academic evaluation, content verification, and document similarity 
 
 Key Features:
 1. Hybrid Plagiarism Detection Engine
-Sentence-BERT semantic embeddings
-N-gram similarity for verbatim detection
-Chunk-based processing for long documents
-Detects paraphrased, restructured, and copy-paste plagiarism.
+* Sentence-BERT semantic embeddings. 
+* N-gram similarity for verbatim detection. 
+* Chunk-based processing for long documents. 
+* Detects paraphrased, restructured, and copy-paste plagiarism.
 2. Multi-Tab Tkinter GUI
-Results Tab: All pairwise similarities (color-coded & sortable)
-Summary Tab: Highest match per file with severity indicators
-Clustering Tab: Groups similar files using NetworkX
-Interactive Pop-Ups: Detailed chunk-level similarity view
+* Results Tab: All pairwise similarities (color-coded & sortable)
+* Summary Tab: Highest match per file with severity indicators
+* Clustering Tab: Groups similar files using NetworkX
+* Interactive Pop-Ups: Detailed chunk-level similarity view
 3. File Format Support
 * .txt, 
 * .docx, 
 * .pdf
-
 4. Intelligent Handling:
 * Skips empty files automatically, 
 * Adjustable similarity threshold, 
@@ -26,7 +25,7 @@ Interactive Pop-Ups: Detailed chunk-level similarity view
 
 How It Works:
 
-Documents are split into chunks.
+Documents are split into chunks.  
 Each chunk pair is compared using:
 * Sentence-BERT cosine similarity
 * N-gram overlap
