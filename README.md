@@ -6,7 +6,7 @@ Designed for academic evaluation, content verification, and document similarity 
 Key Features:
 1. Hybrid Plagiarism Detection Engine
 Sentence-BERT semantic embeddings
-N-gram (5-gram) similarity for verbatim detection
+N-gram similarity for verbatim detection
 Chunk-based processing for long documents
 Detects paraphrased, restructured, and copy-paste plagiarism.
 2. Multi-Tab Tkinter GUI
@@ -15,15 +15,14 @@ Summary Tab: Highest match per file with severity indicators
 Clustering Tab: Groups similar files using NetworkX
 Interactive Pop-Ups: Detailed chunk-level similarity view
 3. File Format Support
+* .txt, 
+* .docx, 
+* .pdf
 
-.txt, 
-.docx, 
-.pdf
 4. Intelligent Handling:
-
-Skips empty files automatically, 
-Adjustable similarity threshold, 
-Clear indicators for flagged/acceptable matches
+* Skips empty files automatically, 
+* Adjustable similarity threshold, 
+* Clear indicators for flagged/acceptable matches
 
 How It Works:
 
@@ -34,37 +33,28 @@ Each chunk pair is compared using:
 
 Final similarity = average of both metrics.
 All pairwise similarities are aggregated into:
-
-Tabular results
-Summaries
-Clusters
-Detailed chunk match reports
+1. Tabular results
+2. Summaries
+3. Clusters
+4. Detailed chunk match reports
 
 Technology Stack:
-
-Python
-
-Sentence-Transformers (SBERT)
-
-Scikit-Learn
-
-PyMuPDF
-
-python-docx
-
-NetworkX
-
-Tkinter (GUI)
+* Python
+* Sentence-Transformers (SBERT)
+* Scikit-Learn
+* PyMuPDF
+* python-docx
+* NetworkX
+* Tkinter (GUI)
 
 Clustering:
 Uses similarity graph + connected components to find plagiarism groups or "collaboration rings".
 
 Use Cases:
-
-Universities checking student assignments
-Content teams detecting article reuse
-Researchers verifying paper originality
-QA teams monitoring internal documentation reuse
+* Universities checking student assignments
+* Content teams detecting article reuse
+* Researchers verifying paper originality
+* QA teams monitoring internal documentation reuse
 
 Status: 
 Fully functional, production-ready local application.
