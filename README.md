@@ -15,8 +15,8 @@ Summary Tab: Highest match per file with severity indicators
 Clustering Tab: Groups similar files using NetworkX
 Interactive Pop-Ups: Detailed chunk-level similarity view
 3. File Format Support
-.txt
-.docx
+.txt, 
+.docx, 
 .pdf
 4. Intelligent Handling
 Skips empty files automatically
@@ -24,6 +24,7 @@ Adjustable similarity threshold
 Clear indicators for flagged/acceptable matches
 
 How It Works:
+
 Documents are split into chunks.
 Each chunk pair is compared using:
 Sentence-BERT cosine similarity
@@ -36,6 +37,7 @@ Clusters
 Detailed chunk match reports
 
 Technology Stack:
+
 Python
 Sentence-Transformers (SBERT)
 Scikit-Learn
@@ -48,6 +50,7 @@ Clustering:
 Uses similarity graph + connected components to find plagiarism groups or "collaboration rings".
 
 Use Cases:
+
 Universities checking student assignments
 Content teams detecting article reuse
 Researchers verifying paper originality
