@@ -15,22 +15,26 @@ Summary Tab: Highest match per file with severity indicators
 Clustering Tab: Groups similar files using NetworkX
 Interactive Pop-Ups: Detailed chunk-level similarity view
 3. File Format Support
+
 .txt, 
 .docx, 
 .pdf
-4. Intelligent Handling
-Skips empty files automatically
-Adjustable similarity threshold
+4. Intelligent Handling:
+
+Skips empty files automatically, 
+Adjustable similarity threshold, 
 Clear indicators for flagged/acceptable matches
 
 How It Works:
 
 Documents are split into chunks.
 Each chunk pair is compared using:
-Sentence-BERT cosine similarity
-N-gram overlap
+* Sentence-BERT cosine similarity
+* N-gram overlap
+
 Final similarity = average of both metrics.
 All pairwise similarities are aggregated into:
+
 Tabular results
 Summaries
 Clusters
@@ -39,11 +43,17 @@ Detailed chunk match reports
 Technology Stack:
 
 Python
+
 Sentence-Transformers (SBERT)
+
 Scikit-Learn
+
 PyMuPDF
+
 python-docx
+
 NetworkX
+
 Tkinter (GUI)
 
 Clustering:
