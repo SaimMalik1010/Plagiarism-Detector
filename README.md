@@ -9,18 +9,15 @@ Sentence-BERT semantic embeddings
 N-gram (5-gram) similarity for verbatim detection
 Chunk-based processing for long documents
 Detects paraphrased, restructured, and copy-paste plagiarism.
-
 2. Multi-Tab Tkinter GUI
 Results Tab: All pairwise similarities (color-coded & sortable)
 Summary Tab: Highest match per file with severity indicators
 Clustering Tab: Groups similar files using NetworkX
 Interactive Pop-Ups: Detailed chunk-level similarity view
-
 3. File Format Support
 .txt
 .docx
 .pdf
-
 4. Intelligent Handling
 Skips empty files automatically
 Adjustable similarity threshold
@@ -56,9 +53,9 @@ Content teams detecting article reuse
 Researchers verifying paper originality
 QA teams monitoring internal documentation reuse
 
-Status
+Status: 
 Fully functional, production-ready local application.
 
 Next planned features:
-CSV export
+CSV export,
 Report generation (PDF)
